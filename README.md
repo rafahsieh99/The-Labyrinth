@@ -27,42 +27,14 @@ Inicializa el laberinto con muros (#) y establece la semilla de números aleator
 
 ### Métodos Públicos
 void generar(): Genera el laberinto utilizando una pila y un algoritmo de búsqueda en profundidad.
+
 void resolver(): Resuelve el laberinto utilizando una pila y un algoritmo de búsqueda en profundidad.
+
 void mostrar() const: Muestra el laberinto en la consola.
 ### Métodos Privados
 bool esValido(int x, int y): Verifica si una celda es válida para moverse.
+
 bool dfs(int x, int y, stack<pair<int, int>>& camino, vector<vector<bool>>& visitado): Realiza una búsqueda en profundidad para encontrar un camino desde la entrada hasta la salida.
 
 ## Función main
 La función main es el punto de entrada del programa. Lee las dimensiones del laberinto, ajusta las dimensiones a impares si es necesario, crea una instancia de Laberinto, genera y resuelve el laberinto, y luego muestra ambos estados (generado y resuelto).
-
-## Ejemplo de salida
-Ingrese el ancho y alto del laberinto: 10 10
-Laberinto generado:
-###########
-#*#*#*#*#*#
-#*#*#*#*#*#
-#*#*#*#*#*#
-#*#*#*#*#*#
-#*#*#*#*#*#
-#*#*#*#*#*#
-#*#*#*#*#*#
-#*#*#*#*#*#
-#*#*#*#*#*#
-#*#*#*#*#*#
-###########
-
-Laberinto resuelto:
-###########
-#.*#*#*#*#*
-#.*#*#*#*#*
-#.*#*#*#*#*
-#.*#*#*#*#*
-#.*#*#*#*#*
-#.*#*#*#*#*
-#.*#*#*#*#*
-#.*#*#*#*#*
-#.*#*#*#*#*
-#.*#*#*#*#*
-###########
-En este ejemplo, * representa los caminos y # los muros. Después de resolver el laberinto, los puntos (.) indican el camino desde la entrada hasta la salida.
